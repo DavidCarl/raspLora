@@ -1,0 +1,23 @@
+[package]
+name = "raspLora"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rppal = { version = "0.13.1", features = ["hal"] }
+sx127x_lora = "0.3.1"
+linux-embedded-hal = {version = "0.2.2"}
+
+rand = "*"
+rand_core = { version = "0.6", features = ["getrandom"] }
+hkdf = "0.8.0"
+generic-array = "0.14.5"
+sha2 = { version = "0.8.0", default-features = false }
+ccm = "0.4.4"
+aes = "0.7.5"
+twoRatchet = {git = "https://github.com/S3j5b0/Double_ratchet"}
+oscore = {git = "https://github.com/DavidCarl/oscore"}
+
+x25519-dalek-ng = { version = "1.1.1", default-features = false, features = ["u32_backend"] }
